@@ -11,8 +11,18 @@ public class BinarySearch {
         BinarySearch search = new BinarySearch();
         int[] array = new int[]{1,4,5,6,7,10,100,102,288,300};
         int x = 102;
+        System.out.println("binaryRecursiveSearch: " + search.binaryRecursiveSearch(array, x));
         System.out.println("binaryIterativeSearch: " + search.binaryIterativeSearch(array, x));
-        System.out.println("binaryIterativeSearch: " + search.binaryIterativeSearch(array, x));
+    }
+
+    /**
+     *
+     * @param array: must be in sorted form.
+     * @param x: search value
+     * @return
+     */
+    public int binaryRecursiveSearch(int[] array, int x){
+        return binaryRecursiveSearch(array, 0, array.length - 1, x);
     }
 
     /**
@@ -23,7 +33,7 @@ public class BinarySearch {
      * @param x: search value
      * @return
      */
-    public int binaryRecursiveSearch(int[] array, int left, int right, int x) {
+    private int binaryRecursiveSearch(int[] array, int left, int right, int x) {
         if (right >= left){
             int midIndex = (right + left) / 2;
             if (x == array[midIndex]){
