@@ -7,14 +7,6 @@ import java.io.IOException;
  */
 public class BinarySearch {
 
-    public static void main(String[] args) throws IOException {
-        BinarySearch search = new BinarySearch();
-        int[] array = new int[]{1,4,5,6,7,10,100,102,288,300};
-        int x = 102;
-        System.out.println("binaryRecursiveSearch: " + search.binaryRecursiveSearch(array, x));
-        System.out.println("binaryIterativeSearch: " + search.binaryIterativeSearch(array, x));
-    }
-
     /**
      *
      * @param array: must be in sorted form.
