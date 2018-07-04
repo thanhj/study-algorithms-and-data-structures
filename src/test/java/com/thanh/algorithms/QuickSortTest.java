@@ -1,7 +1,8 @@
 package com.thanh.algorithms;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @author thanh on 4/7/18
@@ -14,9 +15,9 @@ public class QuickSortTest {
         int[] arr = new int[]{1,4,7,2,3};
         quickSort.sort(arr);
         int[] expected = new int[]{1,2,3,4,7};
-        Assert.assertEquals(arr.length, expected.length);
+        assertEquals(arr.length, expected.length);
         for (int i = 0; i < arr.length; i++){
-            Assert.assertEquals(arr[i], expected[i]);
+            assertEquals(arr[i], expected[i]);
         }
     }
 }
